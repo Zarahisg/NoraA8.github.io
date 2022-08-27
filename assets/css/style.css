@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+/* Section Header */
+.header {
+  background-image: url(../img/bg-header.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.img-logo {
+  width: 80px;
+}
+.position {
+  align-items: center;
+  justify-content: center;
+}
+.linear-white::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.vh-50 {
+  height: 50vmin;
+}
+.decoration {
+  text-decoration: none;
+}
+.size {
+  font-size: 20px;
+  font-weight: 500;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.text-size {
+  font-size: 25px;
+}
+/* Section Portafolio */
+.card-img-filter {
+  filter: brightness(0.5);
+}
+.card {
+  transition-duration: 0.6s;
+  clip-path: polygon(
+    50% 0,
+    100% 0,
+    100% 50%,
+    100% 100%,
+    50% 100%,
+    0 100%,
+    0 50%,
+    0 0
+  );
+}
+.card-effect:hover .card {
+  clip-path: polygon(
+    50% 0,
+    50% 0,
+    100% 50%,
+    100% 50%,
+    50% 100%,
+    50% 100%,
+    0 50%,
+    0 50%
+  );
+}
+.card-img-overlay {
+  transition-duration: 0.6s;
+}
+.card-effect:hover .card-img-overlay {
+  transform: scale(0.9);
+}
+/* Section Sobre Mi */
+.background {
+  background-image: url(../img/background.jpeg);
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+}
+.background.linear-white::after {
+  top: 0;
+}
+.size__img {
+  --size: 80px;
+  width: var(--size);
+  height: var(--size);
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 7px 7px 7px rgba(0 0 0 / 0.5);
+  border: ridge #fff;
+}
+.transform-turn {
+  transform: rotate(0.5turn);
+}
+.padding {
+  padding-bottom: 80px;
+  font-size: 20px;
+}
+/* Section Habilidades */
+.icons-size {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+  object-fit: cover;
+}
+.letter-size {
+  font-size: 18px;
+  padding-top: 15px;
+}
+/* media queris */
+@media screen and (max-width: 375px) {
+  .vh-50 {
+    height: 50vmax;
+  }
+}
+@media screen and (max-width: 450px) {
+  .vh-50 {
+    height: 55vmax;
+  }
+}
